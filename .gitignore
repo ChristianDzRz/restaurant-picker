@@ -1,9 +1,20 @@
-# Python
+# ==========================================
+# ROOT GITIGNORE FOR RESTAURANT PICKER
+# Monorepo with Python Backend + React Frontend
+# ==========================================
+
+# ==========================================
+# PYTHON / BACKEND
+# ==========================================
+
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+
+# Distribution / packaging
 build/
 develop-eggs/
 dist/
@@ -29,79 +40,243 @@ venv/
 ENV/
 env/
 .virtualenv/
+backend/.venv/
+backend/venv/
 
 # UV Package Manager
 uv.lock
 
-# IDEs and Editors
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-*.sublime-project
-*.sublime-workspace
+# PyInstaller
+*.manifest
+*.spec
 
-# Environment Variables
-.env
-.env.local
-.env.*.local
-*.env
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-db.sqlite3
-*.sql
-
-# Testing
+# Unit test / coverage
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
 .tox/
 .nox/
 coverage.xml
 *.cover
 .hypothesis/
+.pytest_cache/
 
-# Logs
-*.log
-logs/
-*.log.*
-
-# FastAPI / Uvicorn
-.uvicorn/
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
 *.ipynb
 
-# MyPy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+# FastAPI / Uvicorn specific
+.uvicorn/
 
-# Pyre
-.pyre/
+# ==========================================
+# NODE.JS / FRONTEND
+# ==========================================
 
-# pytype
-.pytype/
+# Dependencies
+node_modules/
+frontend/node_modules/
+jspm_packages/
 
-# Caches
-*.cache
-.cache/
+# Build outputs
+dist/
+dist-ssr/
+build/
+frontend/dist/
+frontend/build/
 
-# OS
-Thumbs.db
+# Production
+/build
+
+# Node logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Package manager locks (optional - comment out if you want to commit them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Testing
+coverage/
+.nyc_output/
+
+# Next.js (if you use it later)
+.next/
+out/
+
+# Nuxt.js (if you use it later)
+.nuxt/
+
+# Vite
+*.local
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# ==========================================
+# ENVIRONMENT VARIABLES
+# ==========================================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+*.env
+.envrc
+
+# ==========================================
+# DATABASE
+# ==========================================
+
+*.db
+*.sqlite
+*.sqlite3
+db.sqlite3
+*.sql
+*.sql.gz
+
+# Database data directories
+/data
+/db
+
+# ==========================================
+# IDEs AND EDITORS
+# ==========================================
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (PyCharm, WebStorm, IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==========================================
+# OPERATING SYSTEM FILES
+# ==========================================
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
 .Spotlight-V100
 .Trashes
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
-# Temporary files
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+.nfs*
+
+# ==========================================
+# TEMPORARY FILES AND CACHES
+# ==========================================
+
 tmp/
 temp/
 *.tmp
 *.bak
 *.swp
+*.cache
+.cache/
+*.pid
+*.seed
+*.pid.lock
+
+# ==========================================
+# LOGS
+# ==========================================
+
+logs/
+*.log
+*.log.*
+*.out
+
+# ==========================================
+# MISC
+# ==========================================
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Secrets and certificates
+*.pem
+*.key
+*.cert
+*.crt
+secrets/
+*.secret
+
+# Documentation builds
+docs/_build/
+site/
+
+# Backup files
+*.backup
+*.old
+*.db
+restaurant_picker.db*
